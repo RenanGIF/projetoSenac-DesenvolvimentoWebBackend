@@ -1,0 +1,152 @@
+/* ==============================
+   1. Cores e configuracoes gerais
+   ============================== */
+:root {
+	--azul-escuro: #110066;
+	--azul: #110066;
+	--azul-claro: #e8f5f7;
+	--laranja: #f47b20;
+	--laranja-escuro: #d85d0c;
+	--amarelo: #ffee00;
+	--branco: #ffffff;
+	--cinza-fundo: #f4f7f8;
+	--cinza-texto: #53636b;
+	--borda: #dce6e8;
+	--sombra: 0 10px 28px rgba(18, 38, 58, 0.10);
+}
+
+* { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	background: var(--cinza-fundo);
+	color: var(--azul-escuro);
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	line-height: 1.5;
+}
+
+a { color: inherit; }
+
+/* ==============================
+   2. Cabecalho e menu
+   ============================== */
+header {
+	align-items: center;
+	background: var(--azul-escuro);
+	color: var(--branco);
+	display: flex;
+	justify-content: space-between;
+	padding: 24px max(5%, calc((100% - 1180px) / 2));
+}
+
+header h1, header h3 { margin: 0; }
+header h1 { color: var(--amarelo); font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: 1px; }
+header h3 { color: #c8d9df; font-size: 0.95rem; font-weight: normal; }
+
+nav {
+    height: 75px;
+	align-items: center;
+	background: var(--branco);
+	border-bottom: 1px solid var(--borda);
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	padding: 14px max(5%, calc((100% - 1180px) / 2));
+}
+
+.linksNav { display: flex; flex-wrap: wrap; gap: 18px; }
+.linksNav a { color: var(--azul-escuro); font-weight: bold; text-decoration: none; }
+.linksNav a:hover, .linksNav .activeLink { color: var(--laranja-escuro); }
+nav .linksNav > a + a::before { color: var(--borda); content: "|"; margin-right: 18px; }
+
+button, input, textarea { font: inherit; }
+button {
+	background: var(--laranja);
+	border: 0;
+	border-radius: 8px;
+	color: var(--branco);
+	cursor: pointer;
+	font-weight: bold;
+	padding: 11px 18px;
+	transition: background 0.2s, transform 0.2s;
+}
+button:hover { background: var(--laranja-escuro); transform: translateY(-2px); }
+button a { text-decoration: none; }
+#botaoAdm { background: transparent; border: 1px solid var(--amarelo); color: var(--amarelo); }
+
+/* ==============================
+   3. Conteudo e cards
+   ============================== */
+main { margin: 0 auto; max-width: 1180px; padding: 38px 5% 60px; }
+
+hero {
+	align-items: center;
+	background: linear-gradient(120deg, var(--azul-claro), var(--branco));
+	border-left: 7px solid var(--laranja);
+	border-radius: 14px;
+	display: flex;
+	justify-content: center;
+	min-height: 220px;
+	padding: 30px;
+}
+
+.conteinerFormResp { max-width: 650px; text-align: center; }
+.conteinerFormResp h2 { font-size: clamp(1.5rem, 3vw, 2.3rem); margin-top: 0; }
+form { display: grid; gap: 10px; }
+form p, form h2 { margin-bottom: 0; }
+input, textarea { background: var(--branco); border: 1px solid var(--borda); border-radius: 7px; padding: 12px; width: 100%; }
+input:focus, textarea:focus { border-color: var(--azul); outline: 2px solid var(--azul-claro); }
+#respostaContato { color: var(--azul); font-weight: bold; }
+
+.destaquesSemana { padding-top: 36px; }
+.destaquesSemana h2, .paginaTitulo h2 { font-size: 2rem; margin: 0 0 22px; }
+.conteinerCardsDS { display: grid; gap: 22px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.CardsDS { background: var(--branco); border: 1px solid var(--borda); border-radius: 12px; box-shadow: var(--sombra); display: flex; flex-direction: column; padding: 18px; position: relative; }
+.CardsDS > img:first-child { height: 190px; object-fit: contain; width: 100%; }
+.CardsDS h3 { font-size: 1.05rem; margin: 12px 0 6px; }
+.CardsDS > p:not(.freteGratisLabel):not(.descontoLabel):not(.precoSD):not(.precoSDTextDN):not(.precoCD) { color: var(--cinza-texto); font-size: 0.9rem; }
+.freteGratisLabel, .descontoLabel { display: inline-block; font-size: 0.78rem; font-weight: bold; margin: 8px 0 0; padding: 4px 8px; width: fit-content; }
+.freteGratisLabel { background: #e2f6e9; color: #20723c; }
+.descontoLabel { background: #fff0d4; color: #9a5100; }
+.avaliacoes { align-items: center; display: flex; gap: 3px; margin-top: auto; padding-top: 12px; }
+.avaliacoes img { height: 17px; width: 17px; }
+.avaliacoes p { color: var(--cinza-texto); font-size: 0.8rem; margin: 0 0 0 6px; }
+.precoSD, .precoSDTextDN, .precoCD { margin: 3px 0; }
+.precoSD { color: var(--cinza-texto); font-size: 0.85rem; text-decoration: line-through; }
+.precoSDTextDN { font-size: 0.8rem; }
+.precoCD { color: var(--azul); font-size: 1.45rem; font-weight: bold; }
+.CardsDS button { margin-top: 12px; width: 100%; }
+
+/* ==============================
+   4. Paginas internas e formularios
+   ============================== */
+.paginaTitulo { margin-bottom: 30px; }
+.paginaTitulo p { color: var(--cinza-texto); margin: 0; }
+.painel, .formularioAdmin { background: var(--branco); border: 1px solid var(--borda); border-radius: 12px; box-shadow: var(--sombra); padding: clamp(20px, 4vw, 38px); }
+.formularioAdmin { margin: 0 auto; max-width: 720px; }
+.formularioAdmin h2, .painel h2 { margin-top: 0; }
+.campoForm { display: grid; gap: 6px; margin-bottom: 18px; }
+.campoForm label { font-weight: bold; }
+.atendimentoGrid { display: grid; gap: 22px; grid-template-columns: 1fr 1.4fr; }
+.infoAtendimento p { color: var(--cinza-texto); }
+
+/* ==============================
+   5. Rodape e responsividade
+   ============================== */
+footer { background: var(--azul-escuro); color: #dce8eb; padding: 28px max(5%, calc((100% - 1180px) / 2)); }
+footer hr { border: 0; border-top: 1px solid #426072; }
+footer h2 { color: var(--amarelo); }
+footer p { margin: 8px 0; }
+
+@media (max-width: 800px) {
+	header, nav { align-items: flex-start; flex-direction: column; }
+	nav { gap: 14px; }
+	.conteinerCardsDS, .atendimentoGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+	main { padding-left: 4%; padding-right: 4%; }
+	hero { padding: 22px 16px; }
+	.linksNav { gap: 8px 12px; }
+	nav .linksNav > a + a::before { display: none; }
+}
