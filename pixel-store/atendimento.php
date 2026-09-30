@@ -16,10 +16,10 @@
 	</header>
 	<nav>
         <div class="linksNav">
-            <a class="activeLink" href="index.php">Início</a>
+            <a href="index.php">Início</a>
             <a href="#destaquesSemanaT">Destaques da semana</a>
             <a href="catalogo.php">Catálogo</a>
-            <a href="atendimento.php">Atendimento</a>
+            <a class="activeLink" href="atendimento.php">Atendimento</a>
         </div>
         <div class="buttonNav">
             <button onclick="modoPromocao()">Modo Promoção</button>  

@@ -16,9 +16,9 @@
     </header>
     <nav>
         <div class="linksNav">
-            <a class="activeLink" href="index.php">Início</a>
+            <a href="index.php">Início</a>
             <a href="#destaquesSemanaT">Destaques da semana</a>
-            <a href="catalogo.php">Catálogo</a>
+            <a class="activeLink" href="catalogo.php">Catálogo</a>
             <a href="atendimento.php">Atendimento</a>
         </div>
         <div class="buttonNav">
@@ -103,7 +103,7 @@
                                 <p class='freteGratisLabel'>Frete Gratis</p>
                                 <p id='descontoControle'class='descontoLabel'>35% OFF</p>
                                 <h3>$dados[0]</h3>
-                                <p>Descrição do produto</p>
+                                <p>$dados[3]</p>
                                 <div class='avaliacoes'>
                                     <img src='imagens/estrela.png'>
                                     <img src='imagens/estrela.png'>

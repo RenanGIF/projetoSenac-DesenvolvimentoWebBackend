@@ -3,6 +3,7 @@
         $nome = $_POST["nome"];
         $preco = $_POST["preco"];
         $fotoDesenhinho = $_FILES["imagem"];
+        $descricao = $_POST["descricao"];
 
         $caminho = "imagens/" . time() . ".jpg";
 
@@ -11,16 +12,12 @@
             $caminho
         );
 
-        $linha = $nome . "|" . $preco . "|" . $caminho;
+        $linha = $nome . "|" . $preco . "|" . $caminho . "|" . $descricao;
 
         file_put_contents("produtos.txt", $linha . PHP_EOL, FILE_APPEND);
     }
-
-    foreach($admin as $dado){
-        $dados = explode("|", $admin)
-        echo $dados[0] . " - " . $dados[1];
-    }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -67,6 +64,10 @@
                 <div class="campoForm">
                     <label for="imagem">Imagem do produto</label>
                     <input id="imagem" type="file" name="imagem" accept="image/*" required>
+                </div>
+                <div class="campoForm">
+                        <label for="descricao">Descrição do produto</label>
+                    <input id="descricao" name="descricao" type="text" required>
                 </div>
                 <button type="submit">Cadastrar produto</button>
             </form>

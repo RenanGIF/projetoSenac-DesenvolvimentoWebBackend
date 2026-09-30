@@ -1,2 +1,5 @@
-Mouse Gamer|222|imagens/1789777100.jpg
-Fone|2224|imagens/1789777438.jpg
+Mouse Gamer|222|imagens/1789777100.jpg|
+Fone|2224|imagens/1789777438.jpg|
+Mouse Gamer|23232|imagens/1790640187.jpg|
+casa|500000|imagens/1790640231.jpg|
+Carro|1000000|imagens/1790640465.jpg|Carro veloz

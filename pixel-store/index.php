@@ -13,6 +13,13 @@
             <h3>Informática para o seu próximo nível</h3>
         </div>
         <button id="botaoAdm" onclick="exibirAdmin()">Admin</button>
+        <?php
+        echo "<script>
+        function exibirAdmin(){
+            alert('Area destinada apenas para cadastro de produtos, digite a senha para continuar.');
+        }   
+        </script>";
+        ?>
     </header>
 
     <nav>
