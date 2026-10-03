@@ -12,14 +12,10 @@
             <h1>Pixel Store</h1>
             <h3>Informática para o seu próximo nível</h3>
         </div>
-        <button id="botaoAdm" onclick="exibirAdmin()">Admin</button>
-        <?php
-        echo "<script>
-        function exibirAdmin(){
-            alert('Area destinada apenas para cadastro de produtos, digite a senha para continuar.');
-        }   
-        </script>";
-        ?>
+        <div class="buttonHeader">
+            <button><a href="cadastro.php">Cadastro</a></button>
+            <button><a href="login.php">Login</a></button>
+        </div>
     </header>
 
     <nav>

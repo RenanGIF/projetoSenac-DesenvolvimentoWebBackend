@@ -150,3 +150,9 @@ footer p { margin: 8px 0; }
 	.linksNav { gap: 8px 12px; }
 	nav .linksNav > a + a::before { display: none; }
 }
+
+
+.buttonHeader {
+	display: flex;
+	gap: 10px;
+}

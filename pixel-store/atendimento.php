@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Atendimento | Pixel Store</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
-		<div>
-			<h1>Pixel Store</h1>
-			<h3>Informática para o seu próximo nível</h3>
-		</div>
-		<button id="botaoAdm" onclick="exibirAdmin()">Admin</button>
-	</header>
-	<nav>
+    <header> 
+        <div>
+            <h1>Pixel Store</h1>
+            <h3>Informática para o seu próximo nível</h3>
+        </div>
+        <div class="buttonHeader">
+            <button><a href="cadastro.php">Cadastro</a></button>
+            <button><a href="login.php">Login</a></button>
+        </div>
+    </header>
+
+    <nav>
         <div class="linksNav">
-            <a href="index.php">Início</a>
+            <a class="activeLink" href="index.php">Início</a>
             <a href="#destaquesSemanaT">Destaques da semana</a>
             <a href="catalogo.php">Catálogo</a>
-            <a class="activeLink" href="atendimento.php">Atendimento</a>
+            <a href="atendimento.php">Atendimento</a>
         </div>
         <div class="buttonNav">
             <button onclick="modoPromocao()">Modo Promoção</button>  

@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo | Pixel Store</title>
+    <title>Pixel Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header> 
         <div>
             <h1>Pixel Store</h1>
             <h3>Informática para o seu próximo nível</h3>
         </div>
-        <button id="botaoAdm" onclick="exibirAdmin()">Admin</button>
+        <div class="buttonHeader">
+            <button><a href="cadastro.php">Cadastro</a></button>
+            <button><a href="login.php">Login</a></button>
+        </div>
     </header>
+
     <nav>
         <div class="linksNav">
-            <a href="index.php">Início</a>
+            <a class="activeLink" href="index.php">Início</a>
             <a href="#destaquesSemanaT">Destaques da semana</a>
-            <a class="activeLink" href="catalogo.php">Catálogo</a>
+            <a href="catalogo.php">Catálogo</a>
             <a href="atendimento.php">Atendimento</a>
         </div>
         <div class="buttonNav">
